@@ -155,7 +155,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
   <div class="eyebrow">CI reliability</div>
   <h2>A gate people trust</h2>
   <p class="sub">The scheduled GCS pre-checkin gate, before and after two months of fixing flaky waits, races and environment collisions.</p>
-  <div class="two">
+  <div>
     <figure class="viz"><h3>Pre-checkin gate</h3><svg viewBox="0 0 380 170" role="img" aria-label="Pre-checkin gate: pass rate 77 to 96 percent, failure rate 23 to 4 percent">
   <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ea2c63"/><stop offset="1" stop-color="#c397d8"/></linearGradient></defs>
   <text x="0" y="22" class="lbl">Pass rate</text>
@@ -168,19 +168,6 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 </svg>
       <div class="legend"><span><i style="background:#4a3a52"></i>Late Aug</span><span><i style="background:linear-gradient(90deg,#ea2c63,#c397d8)"></i>Sep – Oct</span></div>
       <figcaption>Scheduled runs only, personal debug runs excluded.</figcaption></figure>
-    <figure class="viz"><h3>Where the time goes at scale</h3>
-      <svg viewBox="0 0 380 250" role="img" aria-label="1.6 billion object backup: about 80 percent of wall time was the inventory wait">
-        <defs><linearGradient id="g3" x1="0" x2="1"><stop offset="0" stop-color="#ea2c63"/><stop offset="1" stop-color="#784188"/></linearGradient></defs>
-        <text x="0" y="22" class="lbl">1.6B-object backup &middot; wall time</text>
-        <rect x="0" y="36" width="300" height="34" rx="4" fill="url(#g3)" class="bar"/><rect x="300" y="36" width="75" height="34" rx="4" fill="#4a3a52"/>
-        <text x="12" y="58" class="val">~80% inventory wait</text><text x="310" y="58" class="val dim">copy</text>
-        <text x="0" y="120" class="lbl">Copy throughput, 800M &rarr; 1.6B objects</text>
-        <path d="M0 190 H375" stroke="#2c2333"/>
-        <path d="M0 160 H375" fill="none" stroke="url(#g3)" stroke-width="3" class="draw" pathLength="1"/>
-        <text x="0" y="214" class="val dim">800M</text><text x="375" y="214" text-anchor="end" class="val dim">1.6B</text>
-        <text x="190" y="148" text-anchor="middle" class="val">steady ~115K objects/s</text>
-      </svg>
-      <figcaption>Found the real bottleneck, then verified each fix.</figcaption></figure>
   </div>
 </div></section>
 
