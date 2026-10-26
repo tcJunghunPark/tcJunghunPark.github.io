@@ -107,9 +107,9 @@ footer{padding:40px 0;color:var(--muted);font-size:14px}
   </div>
   <div class="stats">
     <div class="stat"><b>868</b><span lang="ko">머지된 PR (2022–2026)</span><span lang="en">merged PRs (2022–2026)</span></div>
-    <div class="stat"><b>157K</b><span lang="ko">추가한 코드 라인</span><span lang="en">lines of code added</span></div>
+    <div class="stat"><b>204</b><span lang="ko">테스트로 찾아낸 제품 버그</span><span lang="en">product bugs found by testing</span></div>
     <div class="stat"><b>3</b><span lang="ko">클라우드 (AWS·GCP·Azure)</span><span lang="en">clouds (AWS · GCP · Azure)</span></div>
-    <div class="stat"><b>30B</b><span lang="ko">객체 규모 스케일 테스트</span><span lang="en">object-scale test run</span></div>
+    <div class="stat"><b>1.6B</b><span lang="ko">실제 객체 · 440TB 스케일 검증</span><span lang="en">real objects · 440 TB validated</span></div>
   </div>
 </div></section>
 
@@ -134,15 +134,21 @@ footer{padding:40px 0;color:var(--muted);font-size:14px}
     <div class="card"><div class="meta">Multi-tenancy</div>
       <h3><span lang="ko">멀티테넌트 격리(RBAC) 검증</span><span lang="en">Multi-tenant isolation (RBAC)</span></h3>
       <p><span lang="ko">조직 단위 간 접근 거부, 리소스 이동, 목록 스코핑, 작업·과금 레코드 귀속을 다루는 커버리지 매트릭스를 만들고, 그 과정에서 격리 결함을 찾아냈습니다.</span><span lang="en">Built a coverage matrix for cross-unit denial, moving resources between units, list scoping and attribution on tasks and billing, and found isolation gaps along the way.</span></p></div>
+    <div class="card"><div class="meta">Performance · 2026</div>
+      <h3><span lang="ko">10억 단위 스케일 검증</span><span lang="en">Billion-scale validation</span></h3>
+      <p><span lang="ko">실제 객체 1.6B개·440TB 백업에서 800M→1.6B 구간 동안 초당 약 115K 객체 복사 속도가 유지됨을 확인했습니다. 가상 인벤토리로 30B 객체 백업·복구를 돌려 동시성 상한, 인벤토리 대기(전체 시간의 ~80%), 파드 CPU, 메타데이터 저장소 한계를 찾아내고 각 수정을 검증했습니다.</span><span lang="en">Backed up 1.6B real objects (440 TB) with copy throughput holding at about 115K objects/s from 800M to 1.6B. Ran 30B-object backup and restore on synthetic inventories. Found the bottlenecks (concurrency caps, an inventory wait that took ~80% of wall time, pod CPU, metadata-store limits) and verified each fix.</span></p></div>
     <div class="card"><div class="meta">Scale · Lifecycle · Metering</div>
       <h3><span lang="ko">스케일, 데이터 수명주기, 과금</span><span lang="en">Scale, lifecycle &amp; metering</span></h3>
-      <p><span lang="ko">합성 인벤토리·이벤트로 실제 픽스처로는 만들 수 없는 규모의 부하를 주는 하네스와 장기 soak 스위트를 만들었습니다. 만료·GC, 사용량 리포트와 요금표 대조도 자동화했습니다.</span><span lang="en">Scale harnesses that use synthetic inventories and events to load pipelines far beyond real fixtures, plus long-running soak suites. Automated expiry and garbage-collection tests and checked usage reports against rate cards.</span></p></div>
+      <p><span lang="ko">합성 이벤트로 최대 50M 이벤트/윈도우까지 CDP가 따라가는지 확인하는 하네스와 장기 soak 스위트를 만들었습니다. 만료·GC, 사용량 리포트와 요금표 대조도 자동화했습니다.</span><span lang="en">A synthetic-event harness that confirmed CDP keeps up at 50M events per window, plus long-running soak suites. Automated expiry and garbage-collection tests and checked usage reports against rate cards.</span></p></div>
     <div class="card"><div class="meta">Infra · CI</div>
       <h3><span lang="ko">IaC 온보딩과 CI 파이프라인</span><span lang="en">IaC onboarding &amp; CI</span></h3>
       <p><span lang="ko">Terraform/CloudFormation 기반 클라우드 계정 온보딩(업그레이드, 상태 기반 드리프트 감지, 복구 경로)을 자동화하고, Jenkins 파이프라인 운영과 폐기된 테스트 환경 2개의 복구를 맡았습니다.</span><span lang="en">Automated cloud-account onboarding with Terraform and CloudFormation: upgrades, state-backed drift detection, recovery paths. Ran Jenkins pipelines and brought two retired test environments back into service.</span></p></div>
     <div class="card"><div class="meta">Framework</div>
       <h3><span lang="ko">테스트 프레임워크와 품질</span><span lang="en">Test framework &amp; quality</span></h3>
       <p><span lang="ko">CI에 리포트를 남기는 test-flow 엔진, 장기 작업 모니터, REST/gRPC 클라이언트 래퍼를 만들었습니다. 절대 실패하지 않는 assertion을 찾아내는 감사(audit)를 주도했습니다.</span><span lang="en">Built a test-flow reporting engine for CI, a monitor for long-running tasks and REST/gRPC client wrappers. Led audits that found and fixed assertions that could never fail.</span></p></div>
+    <div class="card"><div class="meta">Leadership</div>
+      <h3><span lang="ko">테스트 프로그램 오너십과 팀 성장</span><span lang="en">Owning the program, growing the team</span></h3>
+      <p><span lang="ko">S3·GCS 테스트 영역의 주 담당자로 38개 에픽과 약 21개 테스트 플랜(마일스톤 종료 기준·요구사항 추적표 포함)을 리드했습니다. 신규 QE 온보딩 튜토리얼과 가이드, 면접 과제·평가표를 만들고 면접관으로 참여합니다.</span><span lang="en">Primary owner of the S3 and GCS test areas. Led 38 epics and about 21 test plans with exit criteria and requirement traceability. Built the onboarding tutorial and guides for new QE hires, wrote interview exercises and scorecards, and sit on the interview panel.</span></p></div>
   </div>
 </div></section>
 
@@ -154,7 +160,10 @@ footer{padding:40px 0;color:var(--muted);font-size:14px}
     <ul>
       <li><span lang="ko">GCS 데이터 보호 시스템 테스트 리드, S3 시스템 테스트 공동 담당</span><span lang="en">Lead for GCS data-protection system testing; co-owner of S3 system testing</span></li>
       <li><span lang="ko">테스트 플랜·장애 매트릭스 설계, 에픽 단위 업무 분해와 리드</span><span lang="en">Write test plans and fault matrices, break epics into work and drive them</span></li>
-      <li><span lang="ko">Azure Blob 테스트 프레임워크 착수 (2026)</span><span lang="en">Started the Azure Blob test framework (2026)</span></li>
+      <li><span lang="ko">S3 Instant Access(EA→GA), S3 Rewind 스냅샷 롤백 QE 리드</span><span lang="en">QE lead for S3 Instant Access (early access to GA) and S3 Rewind snapshot rollback</span></li>
+      <li><span lang="ko">GCS 백업 신규 제품의 QE를 0부터 GA 이후까지 전담</span><span lang="en">Owned QE for the new GCS backup product from zero to GA and beyond</span></li>
+      <li><span lang="ko">Azure Blob P0 테스트 전략 수립과 공용 테스트 베이스 구축 (2026)</span><span lang="en">Wrote the Azure Blob P0 test strategy and built its shared test base (2026)</span></li>
+      <li><span lang="ko">204건의 제품 버그 리포트 (High 이상 약 1/4) — 데이터 누락, 권한 우회, 스케일 한계, 경쟁 조건</span><span lang="en">Reported 204 product bugs (about a quarter High or above): silent data loss, authorization bypasses, scale limits, races</span></li>
     </ul></div></div>
   <div class="job"><div class="when">— 2022</div><div>
     <h3>Software Engineer · IDCITI</h3>
