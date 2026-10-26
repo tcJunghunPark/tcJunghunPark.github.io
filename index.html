@@ -10,79 +10,84 @@
 <meta property="og:url" content="https://junghun-park.com/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌮</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fbfaf7;--surface:#ffffff;--ink:#16181d;--muted:#5d6270;--line:#e7e4dc;
-  --accent:#d9480f;--accent-soft:#fff1e8;--chip:#f3f1ec;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#111317;--surface:#181b21;--ink:#eceef2;--muted:#9aa1ae;--line:#2a2e37;
-  --accent:#ff8a4c;--accent-soft:#2a1d15;--chip:#20242c;
-}}
-:root[data-theme="dark"]{
-  --bg:#111317;--surface:#181b21;--ink:#eceef2;--muted:#9aa1ae;--line:#2a2e37;
-  --accent:#ff8a4c;--accent-soft:#2a1d15;--chip:#20242c;
+  --bg:#000;--surface:#0d0a10;--ink:#fff;--muted:#b4adbb;--line:#2c2333;
+  --pink:#ea2c63;--plum:#784188;--lav:#c397d8;
+  --grad:linear-gradient(120.97deg,#ea2c63,#784188);
+  --card:linear-gradient(180deg,rgba(53,29,60,.8) 0%,rgba(53,29,60,0) 100%);
 }
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:16px/1.65 Inter,"Noto Sans KR",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 Outfit,"Noto Sans KR",system-ui,sans-serif;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
 html[data-lang="ko"] [lang="en"],html[data-lang="en"] [lang="ko"]{display:none}
 a{color:inherit}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;gap:20px;height:56px}
-nav .brand{font-weight:700;text-decoration:none;margin-right:auto}
-nav .links a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:18px}
-nav .links a:hover{color:var(--ink)}
-.toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-.toggle button{border:0;background:none;color:var(--muted);font:500 13px Inter,sans-serif;padding:5px 11px;cursor:pointer}
-.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-@media (max-width:720px){nav .links{display:none}}
-section{padding:72px 0;border-bottom:1px solid var(--line)}
-.eyebrow{font:500 13px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
-h1{font-size:clamp(36px,6vw,56px);line-height:1.1;letter-spacing:-.02em;font-weight:700}
-h2{font-size:28px;letter-spacing:-.01em;margin-bottom:28px}
-h3{font-size:18px;margin-bottom:6px}
-.lead{font-size:19px;color:var(--muted);max-width:680px;margin-top:20px}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.btn{display:inline-block;padding:9px 16px;border-radius:8px;border:1px solid var(--line);text-decoration:none;font-weight:500;font-size:14px;background:var(--surface)}
-.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
-.stat b{display:block;font-size:28px;letter-spacing:-.02em}
-.stat span{font-size:13px;color:var(--muted)}
-@media (max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-@media (max-width:720px){.grid{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
-.card p{color:var(--muted);font-size:15px}
-.meta{font:500 12px "JetBrains Mono",monospace;color:var(--accent);margin-bottom:8px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.chips span{background:var(--chip);border-radius:6px;padding:2px 8px;font-size:12px;color:var(--muted)}
-.job{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
-.job:first-of-type{border-top:0}
-.job .when{color:var(--muted);font-size:14px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.bar{background:var(--grad);font-size:14px;text-align:center;padding:9px 16px;font-weight:500}
+header{position:sticky;top:0;z-index:5;background:#000;border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:20px;height:64px}
+nav .brand{font-weight:700;font-size:19px;text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:10px}
+nav .brand i{width:22px;height:22px;border-radius:6px;background:var(--grad);display:inline-block}
+nav .links a{color:var(--muted);text-decoration:none;font-size:15px;margin-left:22px}
+nav .links a:hover{color:#fff}
+.toggle{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.toggle button{border:0;background:none;color:var(--muted);font:500 13px Outfit,sans-serif;padding:5px 12px;border-radius:999px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:#fff;color:#000}
+@media (max-width:760px){nav .links{display:none}}
+section{padding:96px 0}
+.eyebrow{font:13px Monaco,Consolas,"IBM Plex Mono",monospace;color:var(--pink);text-transform:uppercase;letter-spacing:.02em;margin-bottom:16px}
+.eyebrow::before{content:"// "}
+h1{font-size:clamp(40px,6.4vw,68px);line-height:1.05;letter-spacing:-.025em;font-weight:700}
+h1 em{display:block;font-style:normal;color:var(--lav);font-size:.62em;margin-top:14px;letter-spacing:-.02em}
+h2{font-size:clamp(32px,4.6vw,48px);line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+h2+.sub{color:var(--muted);margin-bottom:40px;max-width:640px}
+h3{font-size:22px;letter-spacing:-.015em;margin:14px 0 10px;line-height:1.25}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:80px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.lead{font-size:19px;color:#e9e4ee;max-width:560px;margin-top:24px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid #fff;text-decoration:none;font-weight:500;font-size:16px}
+.btn.primary{background:#fff;color:#000}
+.btn.primary::after{content:"→"}
+.btn:hover{opacity:.85}
+.stats{display:grid;grid-template-columns:1fr 1fr;border:1px solid #4a2f55;border-radius:14px;background:var(--card);overflow:hidden}
+.stat{padding:26px 22px;text-align:center;border-right:1px solid #4a2f55;border-bottom:1px solid #4a2f55}
+.stat:nth-child(2n){border-right:0}.stat:nth-last-child(-n+2){border-bottom:0}
+.stat b{display:block;font-size:34px;letter-spacing:-.02em;background:linear-gradient(120.97deg,#f03d71,#c397d8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:14px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px}
+.card p{color:var(--muted);font-size:16px}
+.meta{display:inline-block;font:11px Monaco,Consolas,monospace;text-transform:uppercase;color:#d9cfe0;border:1px solid #6b5577;border-radius:4px;padding:2px 7px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:13px;color:var(--muted)}
+.job{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:32px 0;border-top:1px solid var(--line)}
+.job .when{font:13px Monaco,Consolas,monospace;color:var(--lav);padding-top:6px}
+.job h3{margin-top:0}
 .job ul{padding-left:18px;color:var(--muted)}
-.job li{margin:4px 0}
-@media (max-width:720px){.job{grid-template-columns:1fr;gap:4px}}
+.job li{margin:6px 0}
+.job li::marker{color:var(--pink)}
+@media (max-width:760px){.job{grid-template-columns:1fr;gap:4px}}
 .list{list-style:none;padding:0}
-.list li{padding:14px 0;border-top:1px solid var(--line)}
-.list li:first-child{border-top:0}
-.list small{display:block;color:var(--muted)}
-.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-@media (max-width:720px){.principles{grid-template-columns:1fr}}
-footer{padding:40px 0;color:var(--muted);font-size:14px}
+.list li{padding:24px 0;border-top:1px solid var(--line);font-size:19px}
+.list small{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+.band{background:var(--grad);border-radius:20px;padding:64px 48px;text-align:center}
+.band h2{margin-bottom:12px}.band p{color:#fde9f0;max-width:560px;margin:0 auto}
+.band .cta{justify-content:center}
+.band .btn{border-color:#fff}
+footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
+<div class="bar"><span lang="ko">멀티클라우드 백업·복구 신뢰성 엔지니어</span><span lang="en">Reliability engineering for multi-cloud backup &amp; recovery</span></div>
 <header><div class="wrap"><nav>
-  <a class="brand" href="#top">Junghun Park 🌮</a>
+  <a class="brand" href="#top"><i></i>Junghun Park</a>
   <div class="links">
     <a href="#work"><span lang="ko">주요 업무</span><span lang="en">Work</span></a>
     <a href="#experience"><span lang="ko">경력</span><span lang="en">Experience</span></a>
     <a href="#research"><span lang="ko">연구</span><span lang="en">Research</span></a>
-    <a href="#projects"><span lang="ko">프로젝트</span><span lang="en">Projects</span></a>
     <a href="#contact"><span lang="ko">연락</span><span lang="en">Contact</span></a>
   </div>
   <div class="toggle" role="group" aria-label="Language">
@@ -92,30 +97,34 @@ footer{padding:40px 0;color:var(--muted);font-size:14px}
 </nav></div></header>
 
 <main id="top">
-<section><div class="wrap">
-  <div class="eyebrow">Software Engineer · Clumio, a Commvault company</div>
-  <h1><span lang="ko">멀티클라우드 데이터 보호의<br>신뢰성을 검증합니다.</span><span lang="en">I make multi-cloud data<br>protection provably reliable.</span></h1>
+<section><div class="wrap hero">
+ <div>
+  <div class="eyebrow">Software Engineer · QE / SDET</div>
+  <h1><span lang="ko">멀티클라우드<br>데이터 보호 검증</span><span lang="en">Multi-Cloud<br>Data Protection<br>Validation</span><em><span lang="ko">시스템이 실패하는 방식을 먼저 찾습니다</span><span lang="en">Find every failure first</span></em></h1>
   <p class="lead">
-    <span lang="ko">AWS·GCP·Azure 위에서 동작하는 백업/복구 플랫폼의 시스템 테스트를 설계하고 이끕니다. 장애 주입, 대규모 스케일 테스트, 멀티테넌트 격리 검증, CI 파이프라인까지 — 고객이 데이터를 잃지 않도록 시스템이 실패하는 모든 방식을 먼저 찾아냅니다.</span>
-    <span lang="en">I design and lead system testing for a backup and restore platform running on AWS, GCP and Azure. Fault injection, scale testing, multi-tenant isolation and CI pipelines: I find every way the system can fail before a customer does.</span>
+    <span lang="ko">AWS·GCP·Azure 위의 백업/복구 플랫폼 시스템 테스트를 설계하고 이끕니다. 장애 주입, 10억 단위 스케일 테스트, 멀티테넌트 격리 검증, CI 파이프라인까지 담당합니다.</span>
+    <span lang="en">I design and lead system testing for a backup and restore platform on AWS, GCP and Azure. Fault injection, billion-scale testing, multi-tenant isolation and CI pipelines.</span>
   </p>
   <div class="cta">
-    <a class="btn primary" href="mailto:tacohun21@gmail.com">tacohun21@gmail.com</a>
+    <a class="btn primary" href="mailto:tacohun21@gmail.com"><span lang="ko">연락하기</span><span lang="en">Get in touch</span></a>
     <a class="btn" href="https://www.linkedin.com/in/junghun-park-a32303174/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="btn" href="https://github.com/tcJunghunPark" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn" href="https://velog.io/@tacohun21" target="_blank" rel="noopener">velog</a>
   </div>
-  <div class="stats">
+ </div>
+ <div class="stats">
     <div class="stat"><b>868</b><span lang="ko">머지된 PR (2022–2026)</span><span lang="en">merged PRs (2022–2026)</span></div>
-    <div class="stat"><b>204</b><span lang="ko">테스트로 찾아낸 제품 버그</span><span lang="en">product bugs found by testing</span></div>
-    <div class="stat"><b>3</b><span lang="ko">클라우드 (AWS·GCP·Azure)</span><span lang="en">clouds (AWS · GCP · Azure)</span></div>
-    <div class="stat"><b>1.6B</b><span lang="ko">실제 객체 · 440TB 스케일 검증</span><span lang="en">real objects · 440 TB validated</span></div>
-  </div>
+    <div class="stat"><b>204</b><span lang="ko">테스트로 찾은 제품 버그</span><span lang="en">product bugs found</span></div>
+    <div class="stat"><b>1.6B</b><span lang="ko">실제 객체 · 440TB 검증</span><span lang="en">real objects · 440 TB</span></div>
+    <div class="stat"><b>30B</b><span lang="ko">객체 스케일 백업·복구</span><span lang="en">object-scale backup &amp; restore</span></div>
+    <div class="stat"><b>38</b><span lang="ko">리드한 에픽</span><span lang="en">epics led</span></div>
+    <div class="stat"><b>3</b><span lang="ko">클라우드 AWS·GCP·Azure</span><span lang="en">clouds · AWS · GCP · Azure</span></div>
+ </div>
 </div></section>
 
 <section id="work"><div class="wrap">
   <div class="eyebrow">Selected work</div>
   <h2><span lang="ko">주요 업무</span><span lang="en">What I build</span></h2>
+  <p class="sub"><span lang="ko">S3·GCS 테스트 영역의 주 담당자로서 만든 것들입니다.</span><span lang="en">What I built as primary owner of the S3 and GCS test areas.</span></p>
   <div class="grid">
     <div class="card"><div class="meta">GCP · 2025–2026 · ~175 PRs</div>
       <h3><span lang="ko">GCS 백업 테스트 스위트를 처음부터 구축</span><span lang="en">GCS backup test suite, from zero</span></h3>
@@ -174,6 +183,9 @@ footer{padding:40px 0;color:var(--muted);font-size:14px}
   <div class="job"><div class="when"><span lang="ko">학력</span><span lang="en">Education</span></div><div>
     <h3>M.S. Computer Science · Stony Brook University</h3>
     <ul><li>Mobile Computing &amp; Wireless Networks</li></ul></div></div>
+  <div class="job"><div class="when">Stack</div><div><div class="chips" style="margin-top:0">
+    <span>Python</span><span>Go</span><span>pytest</span><span>Pydantic</span><span>gRPC / Protobuf</span><span>REST</span><span>AWS</span><span>GCP</span><span>Azure</span><span>Terraform</span><span>Kubernetes</span><span>Jenkins</span><span>PostgreSQL</span><span>Docker</span>
+  </div></div></div>
 </div></section>
 
 <section id="research"><div class="wrap">
@@ -186,36 +198,12 @@ footer{padding:40px 0;color:var(--muted);font-size:14px}
   </ul>
 </div></section>
 
-<section id="projects"><div class="wrap">
-  <div class="eyebrow">Projects &amp; awards</div>
-  <h2><span lang="ko">프로젝트 · 수상</span><span lang="en">Projects &amp; competitions</span></h2>
-  <div class="grid">
-    <div class="card"><div class="meta">Stony Brook University</div><h3>IvyMagazine</h3><p><span lang="ko">👗 학교 팀 프로젝트 — 웹 매거진</span><span lang="en">👗 School team project — web magazine</span></p></div>
-    <div class="card"><div class="meta">Stony Brook University</div><h3>YouNote</h3><p><span lang="ko">📝 YouTube 영상과 노트패드를 결합한 학습 웹앱 (CSE 323 팀 프로젝트)</span><span lang="en">📝 Web app pairing YouTube videos with a notepad (CSE 323 team project)</span></p></div>
-    <div class="card"><div class="meta">Personal</div><h3>TrackIO</h3><p><span lang="ko">🧭 개인 프로젝트</span><span lang="en">🧭 Personal project</span></p></div>
-    <div class="card"><div class="meta">Competitions</div><h3><span lang="ko">경진대회</span><span lang="en">Competitions</span></h3><p><span lang="ko">국방과학기술을 활용한 창업 경진대회 · 태양광 발전량 예측 AI 경진대회</span><span lang="en">Defense-technology startup competition · Solar power forecasting AI competition</span></p></div>
-  </div>
-</div></section>
-
-<section id="skills"><div class="wrap">
-  <div class="eyebrow">How I work</div>
-  <h2><span lang="ko">일하는 방식</span><span lang="en">How I work</span></h2>
-  <div class="principles">
-    <div class="card"><h3><span lang="ko">👬 함께 목표를 달성</span><span lang="en">👬 Win as a team</span></h3><p><span lang="ko">다양한 배경의 동료와 끊임없이 소통하며 공통된 방향을 유지합니다.</span><span lang="en">Constant communication across backgrounds keeps everyone pointed at the same goal.</span></p></div>
-    <div class="card"><h3><span lang="ko">🌳 요구사항보다 목표</span><span lang="en">🌳 Goals over tickets</span></h3><p><span lang="ko">작은 요구사항보다 프로젝트의 큰 목표를 기억하고 더 나은 대안을 제시합니다.</span><span lang="en">I keep the project goal in view, not just the next requirement, and propose better options.</span></p></div>
-    <div class="card"><h3><span lang="ko">🧪 실패를 먼저 찾기</span><span lang="en">🧪 Find failure first</span></h3><p><span lang="ko">"통과"가 아니라 "고객이 무엇을 보는가"로 검증합니다. 실패할 수 없는 테스트는 테스트가 아닙니다.</span><span lang="en">I assert on what the customer sees, not on "it passed". A test that cannot fail is not a test.</span></p></div>
-  </div>
-  <div class="chips" style="margin-top:24px">
-    <span>Python</span><span>Go</span><span>pytest</span><span>Pydantic</span><span>gRPC / Protobuf</span><span>REST</span><span>AWS</span><span>GCP</span><span>Azure</span><span>Terraform</span><span>Kubernetes</span><span>Jenkins</span><span>PostgreSQL</span><span>Docker</span>
-  </div>
-</div></section>
-
-<section id="contact" style="border-bottom:0"><div class="wrap">
-  <div class="eyebrow">Contact</div>
-  <h2><span lang="ko">연락하기</span><span lang="en">Get in touch</span></h2>
-  <p class="lead" style="margin-top:0"><span lang="ko">분산 시스템 신뢰성, 멀티클라우드, 테스트 인프라에 대한 이야기는 언제든 환영입니다.</span><span lang="en">Always happy to talk distributed-systems reliability, multi-cloud and test infrastructure.</span></p>
-  <div class="cta"><a class="btn primary" href="mailto:tacohun21@gmail.com">tacohun21@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/junghun-park-a32303174/" target="_blank" rel="noopener">LinkedIn</a></div>
-</div></section>
+<section id="contact"><div class="wrap"><div class="band">
+  <div class="eyebrow" style="color:#fff">Contact</div>
+  <h2><span lang="ko">함께 이야기해요</span><span lang="en">Let's talk</span></h2>
+  <p><span lang="ko">분산 시스템 신뢰성, 멀티클라우드, 테스트 인프라에 대한 이야기는 언제든 환영입니다.</span><span lang="en">Always happy to talk distributed-systems reliability, multi-cloud and test infrastructure.</span></p>
+  <div class="cta"><a class="btn primary" href="mailto:tacohun21@gmail.com">tacohun21@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/junghun-park-a32303174/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://velog.io/@tacohun21" target="_blank" rel="noopener">velog</a></div>
+</div></div></section>
 </main>
 
 <footer><div class="wrap">© 2026 Junghun Park</div></footer>
