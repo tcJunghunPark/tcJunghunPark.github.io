@@ -133,7 +133,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
   <h1>Multi-Cloud<br>Data Protection<br>Validation<em>Find every failure first</em></h1>
   <p class="lead">
     
-    I design and lead system testing for a backup and restore platform on AWS, GCP and Azure. Fault injection, billion-scale testing, multi-tenant isolation and CI pipelines.
+    I design and lead system testing for a backup and restore platform on AWS, GCP and Azure. Fault injection, scale testing from 1.6B real objects to 70B synthetic ones, multi-tenant isolation and CI pipelines.
   </p>
   <div class="cta">
     <a class="btn primary" href="mailto:tacohun21@gmail.com">Get in touch</a>
@@ -146,8 +146,8 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
     <div class="stat"><b>6&times;</b><span>fewer gate failures (23% &rarr; 4%)</span></div>
     <div class="stat"><b>115K/s</b><span>objects copied, steady from 800M to 1.6B</span></div>
     <div class="stat"><b>98%</b><span>infra deploy pipeline success</span></div>
-    <div class="stat"><b>1.6B</b><span>real objects &middot; 440 TB validated</span></div>
-    <div class="stat"><b>~80%</b><span>of scale-run wall time traced to one bottleneck</span></div>
+    <div class="stat"><b>1.6B</b><span>real objects (440 TB) handled hands-on</span></div>
+    <div class="stat"><b>70B</b><span>objects scale-tested with synthetic inventories</span></div>
  </div>
 </div></section>
 
@@ -211,8 +211,8 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
       <h3>Multi-tenant isolation (RBAC)</h3>
       <p>Built a coverage matrix for cross-unit denial, moving resources between units, list scoping and attribution on tasks and billing, and found isolation gaps along the way.</p></div>
     <div class="card"><div class="meta">Performance · 2026</div>
-      <h3>Billion-scale validation</h3>
-      <p>Backed up 1.6B real objects (440 TB) with copy throughput holding at about 115K objects/s from 800M to 1.6B. Ran 30B-object backup and restore on synthetic inventories. Found the bottlenecks (concurrency caps, an inventory wait that took ~80% of wall time, pod CPU, metadata-store limits) and verified each fix.</p></div>
+      <h3>From 1.6B real to 70B synthetic objects</h3>
+      <p>Backed up 1.6B real objects (440 TB) with copy throughput holding at about 115K objects/s from 800M to 1.6B. Then pushed backup and restore to 70B objects with synthetic inventories. Found the bottlenecks (concurrency caps, an inventory wait that took ~80% of wall time, pod CPU, metadata-store limits) and verified each fix.</p></div>
     <div class="card"><div class="meta">Scale · Lifecycle · Metering</div>
       <h3>Scale, lifecycle &amp; metering</h3>
       <p>A synthetic-event harness that confirmed CDP keeps up at 50M events per window, plus long-running soak suites. Automated expiry and garbage-collection tests and checked usage reports against rate cards.</p></div>
@@ -273,7 +273,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
       <li>Indoor drone-testing solution; IDefense</li>
     </ul></div></div>
   <div class="job"><div class="when">Education</div><div>
-    <h3>M.S. Computer Science · Stony Brook University</h3>
+    <h3>B.S. / M.S. Computer Science (combined program) · Stony Brook University</h3>
     <ul><li>Mobile Computing &amp; Wireless Networks</li></ul></div></div>
   <div class="job"><div class="when">Stack</div><div><div class="chips" style="margin-top:0">
     <span>Python</span><span>Go</span><span>pytest</span><span>Pydantic</span><span>gRPC / Protobuf</span><span>REST</span><span>AWS</span><span>GCP</span><span>Azure</span><span>Terraform</span><span>Kubernetes</span><span>Jenkins</span><span>PostgreSQL</span><span>Docker</span>
