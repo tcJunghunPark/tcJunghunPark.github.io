@@ -144,7 +144,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
  <div class="stats">
     <div class="stat"><b>96%</b><span>scheduled pre-checkin pass rate, up from 77%</span></div>
     <div class="stat"><b>6&times;</b><span>fewer gate failures (23% &rarr; 4%)</span></div>
-    <div class="stat"><b>12% &rarr; 0%</b><span>aborted gate runs</span></div>
+    <div class="stat"><b>115K/s</b><span>objects copied, steady from 800M to 1.6B</span></div>
     <div class="stat"><b>98%</b><span>infra deploy pipeline success</span></div>
     <div class="stat"><b>1.6B</b><span>real objects &middot; 440 TB validated</span></div>
     <div class="stat"><b>~80%</b><span>of scale-run wall time traced to one bottleneck</span></div>
@@ -156,7 +156,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
   <h2>A gate people trust</h2>
   <p class="sub">The scheduled GCS pre-checkin gate, before and after two months of fixing flaky waits, races and environment collisions.</p>
   <div class="two">
-    <figure class="viz"><h3>Pre-checkin gate</h3><svg viewBox="0 0 380 250" role="img" aria-label="Pre-checkin gate: pass rate 77 to 96 percent, failure rate 23 to 4 percent, aborted runs 12 to 0 percent">
+    <figure class="viz"><h3>Pre-checkin gate</h3><svg viewBox="0 0 380 170" role="img" aria-label="Pre-checkin gate: pass rate 77 to 96 percent, failure rate 23 to 4 percent">
   <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ea2c63"/><stop offset="1" stop-color="#c397d8"/></linearGradient></defs>
   <text x="0" y="22" class="lbl">Pass rate</text>
   <rect x="0" y="30" width="231" height="14" rx="3" fill="#4a3a52" class="bar"/><text x="239" y="42" class="val dim">77%</text>
@@ -164,9 +164,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
   <text x="0" y="102" class="lbl">Failure rate</text>
   <rect x="0" y="110" width="69" height="14" rx="3" fill="#4a3a52" class="bar"/><text x="77" y="122" class="val dim">23%</text>
   <rect x="0" y="130" width="12" height="14" rx="3" fill="url(#g)" class="bar"/><text x="20" y="142" class="val">4%</text>
-  <text x="0" y="182" class="lbl">Aborted runs</text>
-  <rect x="0" y="190" width="36" height="14" rx="3" fill="#4a3a52" class="bar"/><text x="44" y="202" class="val dim">12%</text>
-  <rect x="0" y="210" width="2" height="14" rx="3" fill="url(#g)" class="bar"/><text x="10" y="222" class="val">0%</text>
+  
 </svg>
       <div class="legend"><span><i style="background:#4a3a52"></i>Late Aug</span><span><i style="background:linear-gradient(90deg,#ea2c63,#c397d8)"></i>Sep – Oct</span></div>
       <figcaption>Scheduled runs only, personal debug runs excluded.</figcaption></figure>
@@ -193,7 +191,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
   <div class="grid">
     <div class="card"><div class="meta">CI · Jenkins</div>
       <h3>Pipelines people trust</h3>
-      <p>I build and maintain the GCS pre-checkin gate and its stage jobs. Over two months I removed flaky waits, race conditions and environment collisions. The scheduled gate went from 77% to 96% green, failures fell from 23% to 4%, and aborted runs went to zero. The arena deploy pipeline holds 98% success.</p>
+      <p>I build and maintain the GCS pre-checkin gate and its stage jobs. Over two months I removed flaky waits, race conditions and environment collisions. The scheduled gate went from 77% to 96% green, failures fell from 23% to 4%,. The arena deploy pipeline holds 98% success.</p>
       <div class="chips"><span>Jenkins</span><span>Job DSL</span><span>Groovy</span><span>Kubernetes</span><span>Slack alerts</span></div></div>
     <div class="card"><div class="meta">GCP · 2025–2026</div>
       <h3>GCS backup test suite, from zero</h3>
