@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 <meta property="og:url" content="https://junghun-park.com/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌮</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#000;--surface:#0d0a10;--ink:#fff;--muted:#b4adbb;--line:#2c2333;
@@ -20,8 +20,7 @@
 }
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;color-scheme:dark}
-body{background:var(--bg);color:var(--ink);font:17px/1.6 Outfit,"Noto Sans KR",system-ui,sans-serif;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
-html[data-lang="ko"] [lang="en"],html[data-lang="en"] [lang="ko"]{display:none}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 Outfit,system-ui,sans-serif;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 .bar{background:var(--grad);font-size:14px;text-align:center;padding:9px 16px;font-weight:500}
@@ -31,9 +30,6 @@ nav .brand{font-weight:700;font-size:19px;text-decoration:none;margin-right:auto
 nav .brand i{width:22px;height:22px;border-radius:6px;background:var(--grad);display:inline-block}
 nav .links a{color:var(--muted);text-decoration:none;font-size:15px;margin-left:22px}
 nav .links a:hover{color:#fff}
-.toggle{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
-.toggle button{border:0;background:none;color:var(--muted);font:500 13px Outfit,sans-serif;padding:5px 12px;border-radius:999px;cursor:pointer}
-.toggle button[aria-pressed="true"]{background:#fff;color:#000}
 @media (max-width:760px){nav .links{display:none}}
 section{padding:96px 0}
 .eyebrow{font:13px Monaco,Consolas,"IBM Plex Mono",monospace;color:var(--pink);text-transform:uppercase;letter-spacing:.02em;margin-bottom:16px}
@@ -81,18 +77,14 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 </style>
 </head>
 <body>
-<div class="bar"><span lang="ko">멀티클라우드 백업·복구 신뢰성 엔지니어</span><span lang="en">Reliability engineering for multi-cloud backup &amp; recovery</span></div>
+<div class="bar">Reliability engineering for multi-cloud backup &amp; recovery</div>
 <header><div class="wrap"><nav>
   <a class="brand" href="#top"><i></i>Junghun Park</a>
   <div class="links">
-    <a href="#work"><span lang="ko">주요 업무</span><span lang="en">Work</span></a>
-    <a href="#experience"><span lang="ko">경력</span><span lang="en">Experience</span></a>
-    <a href="#research"><span lang="ko">연구</span><span lang="en">Research</span></a>
-    <a href="#contact"><span lang="ko">연락</span><span lang="en">Contact</span></a>
-  </div>
-  <div class="toggle" role="group" aria-label="Language">
-    <button data-set-lang="ko" aria-pressed="true">KR</button>
-    <button data-set-lang="en" aria-pressed="false">EN</button>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav></div></header>
 
@@ -100,87 +92,91 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 <section><div class="wrap hero">
  <div>
   <div class="eyebrow">Software Engineer · QE / SDET</div>
-  <h1><span lang="ko">멀티클라우드<br>데이터 보호 검증</span><span lang="en">Multi-Cloud<br>Data Protection<br>Validation</span><em><span lang="ko">시스템이 실패하는 방식을 먼저 찾습니다</span><span lang="en">Find every failure first</span></em></h1>
+  <h1>Multi-Cloud<br>Data Protection<br>Validation<em>Find every failure first</em></h1>
   <p class="lead">
-    <span lang="ko">AWS·GCP·Azure 위의 백업/복구 플랫폼 시스템 테스트를 설계하고 이끕니다. 장애 주입, 10억 단위 스케일 테스트, 멀티테넌트 격리 검증, CI 파이프라인까지 담당합니다.</span>
-    <span lang="en">I design and lead system testing for a backup and restore platform on AWS, GCP and Azure. Fault injection, billion-scale testing, multi-tenant isolation and CI pipelines.</span>
+    
+    I design and lead system testing for a backup and restore platform on AWS, GCP and Azure. Fault injection, billion-scale testing, multi-tenant isolation and CI pipelines.
   </p>
   <div class="cta">
-    <a class="btn primary" href="mailto:tacohun21@gmail.com"><span lang="ko">연락하기</span><span lang="en">Get in touch</span></a>
+    <a class="btn primary" href="mailto:tacohun21@gmail.com">Get in touch</a>
     <a class="btn" href="https://www.linkedin.com/in/junghun-park-a32303174/" target="_blank" rel="noopener">LinkedIn</a>
     <a class="btn" href="https://github.com/tcJunghunPark" target="_blank" rel="noopener">GitHub</a>
   </div>
  </div>
  <div class="stats">
-    <div class="stat"><b>868</b><span lang="ko">머지된 PR (2022–2026)</span><span lang="en">merged PRs (2022–2026)</span></div>
-    <div class="stat"><b>204</b><span lang="ko">테스트로 찾은 제품 버그</span><span lang="en">product bugs found</span></div>
-    <div class="stat"><b>1.6B</b><span lang="ko">실제 객체 · 440TB 검증</span><span lang="en">real objects · 440 TB</span></div>
-    <div class="stat"><b>30B</b><span lang="ko">객체 스케일 백업·복구</span><span lang="en">object-scale backup &amp; restore</span></div>
-    <div class="stat"><b>38</b><span lang="ko">리드한 에픽</span><span lang="en">epics led</span></div>
-    <div class="stat"><b>3</b><span lang="ko">클라우드 AWS·GCP·Azure</span><span lang="en">clouds · AWS · GCP · Azure</span></div>
+    <div class="stat"><b>96%</b><span>scheduled pre-checkin pass rate, up from 77%</span></div>
+    <div class="stat"><b>6&times;</b><span>fewer gate failures (23% &rarr; 4%)</span></div>
+    <div class="stat"><b>12% &rarr; 0%</b><span>aborted gate runs</span></div>
+    <div class="stat"><b>98%</b><span>infra deploy pipeline success</span></div>
+    <div class="stat"><b>1.6B</b><span>real objects &middot; 440 TB validated</span></div>
+    <div class="stat"><b>~80%</b><span>of scale-run wall time traced to one bottleneck</span></div>
  </div>
 </div></section>
 
 <section id="work"><div class="wrap">
   <div class="eyebrow">Selected work</div>
-  <h2><span lang="ko">주요 업무</span><span lang="en">What I build</span></h2>
-  <p class="sub"><span lang="ko">S3·GCS 테스트 영역의 주 담당자로서 만든 것들입니다.</span><span lang="en">What I built as primary owner of the S3 and GCS test areas.</span></p>
+  <h2>What I build</h2>
+  <p class="sub">What I built as primary owner of the S3 and GCS test areas.</p>
   <div class="grid">
-    <div class="card"><div class="meta">GCP · 2025–2026 · ~175 PRs</div>
-      <h3><span lang="ko">GCS 백업 테스트 스위트를 처음부터 구축</span><span lang="en">GCS backup test suite, from zero</span></h3>
-      <p><span lang="ko">플랫폼이 Google Cloud를 지원하기 시작하면서 SDK 레이어, API 래퍼, 매일 도는 pre-checkin 파이프라인, 보호 그룹·정책, 버전 체인 복구, 아카이브 티어 복구, 필터(prefix·regex·storage class)와 시점 복구까지 전체 테스트 체계를 리드했습니다.</span><span lang="en">As the platform added Google Cloud, I led the whole test program: SDK layer, API wrappers, a daily pre-checkin pipeline, protection groups and policies, versioned restore chains, archive-tier restores, backup filters and point-in-time restore.</span></p>
+    <div class="card"><div class="meta">CI · Jenkins</div>
+      <h3>Pipelines people trust</h3>
+      <p>I build and maintain the GCS pre-checkin gate and its stage jobs. Over two months I removed flaky waits, race conditions and environment collisions. The scheduled gate went from 77% to 96% green, failures fell from 23% to 4%, and aborted runs went to zero. The arena deploy pipeline holds 98% success.</p>
+      <div class="chips"><span>Jenkins</span><span>Job DSL</span><span>Groovy</span><span>Kubernetes</span><span>Slack alerts</span></div></div>
+    <div class="card"><div class="meta">GCP · 2025–2026</div>
+      <h3>GCS backup test suite, from zero</h3>
+      <p>As the platform added Google Cloud, I led the whole test program: SDK layer, API wrappers, a daily pre-checkin pipeline, protection groups and policies, versioned restore chains, archive-tier restores, backup filters and point-in-time restore.</p>
       <div class="chips"><span>GCS</span><span>Pub/Sub</span><span>Eventarc</span><span>Terraform</span><span>pytest</span></div></div>
-    <div class="card"><div class="meta">AWS · 2023–2026 · 225+ PRs</div>
-      <h3><span lang="ko">S3 백업/복구 E2E 커버리지</span><span lang="en">S3 backup &amp; restore end to end</span></h3>
-      <p><span lang="ko">증분 백업, 객체 필터, 스토리지 클래스·아카이브 티어, 고객 제공 키 암호화, 체크섬, 멀티파트, 멀웨어 탐지, 교차 리전 복구를 검증했습니다. Instant Access, 버킷 시점 롤백 등 신규 기능의 출시 전 자동화를 리드했습니다.</span><span lang="en">Coverage for incremental backups, object filters, storage classes and archive tiers, customer-key encryption, checksums, multipart uploads, malware detection and cross-region restore. Led pre-release automation for instant access and point-in-time bucket rollback.</span></p>
+    <div class="card"><div class="meta">AWS · 2023–2026</div>
+      <h3>S3 backup &amp; restore end to end</h3>
+      <p>Coverage for incremental backups, object filters, storage classes and archive tiers, customer-key encryption, checksums, multipart uploads, malware detection and cross-region restore. Led pre-release automation for instant access and point-in-time bucket rollback.</p>
       <div class="chips"><span>S3</span><span>IAM</span><span>EventBridge</span><span>SQS</span><span>CloudFormation</span></div></div>
     <div class="card"><div class="meta">Resilience · 2023–2026</div>
-      <h3><span lang="ko">장애 주입 매트릭스</span><span lang="en">Fault-injection matrices</span></h3>
-      <p><span lang="ko">백업·복구 도중 원본 삭제/덮어쓰기, 권한 회수, 요청자 지불 버킷, 법적 보존·리텐션 락, 암호화 키 손상 등을 주입하는 헬퍼와 파이프라인을 설계했습니다. 고객이 실제로 보는 알림·에러 리포트·작업 상태를 기준으로 검증합니다.</span><span lang="en">Designed helpers and pipelines that break things mid-backup or mid-restore: deleted or overwritten sources, revoked access, requester-pays buckets, legal holds, broken encryption keys. Every test asserts on what the customer actually sees.</span></p></div>
+      <h3>Fault-injection matrices</h3>
+      <p>Designed helpers and pipelines that break things mid-backup or mid-restore: deleted or overwritten sources, revoked access, requester-pays buckets, legal holds, broken encryption keys. Every test asserts on what the customer actually sees.</p></div>
     <div class="card"><div class="meta">Continuous data protection</div>
-      <h3><span lang="ko">이벤트 기반 연속 백업(CDP)</span><span lang="en">Event-driven continuous backup</span></h3>
-      <p><span lang="ko">두 클라우드에서 마이크로 백업, 재보호, carry-over 이벤트, soft/hard delete, 다중 토픽 토폴로지를 검증했습니다. 내부 트리거 대신 공개 고객 API로 스위트를 전환했습니다.</span><span lang="en">Validated micro-backups, reprotect flows, carry-over events, soft vs hard deletes and multi-topic topologies on both clouds. Moved the suites from internal triggers to the public customer API.</span></p></div>
+      <h3>Event-driven continuous backup</h3>
+      <p>Validated micro-backups, reprotect flows, carry-over events, soft vs hard deletes and multi-topic topologies on both clouds. Moved the suites from internal triggers to the public customer API.</p></div>
     <div class="card"><div class="meta">Multi-tenancy</div>
-      <h3><span lang="ko">멀티테넌트 격리(RBAC) 검증</span><span lang="en">Multi-tenant isolation (RBAC)</span></h3>
-      <p><span lang="ko">조직 단위 간 접근 거부, 리소스 이동, 목록 스코핑, 작업·과금 레코드 귀속을 다루는 커버리지 매트릭스를 만들고, 그 과정에서 격리 결함을 찾아냈습니다.</span><span lang="en">Built a coverage matrix for cross-unit denial, moving resources between units, list scoping and attribution on tasks and billing, and found isolation gaps along the way.</span></p></div>
+      <h3>Multi-tenant isolation (RBAC)</h3>
+      <p>Built a coverage matrix for cross-unit denial, moving resources between units, list scoping and attribution on tasks and billing, and found isolation gaps along the way.</p></div>
     <div class="card"><div class="meta">Performance · 2026</div>
-      <h3><span lang="ko">10억 단위 스케일 검증</span><span lang="en">Billion-scale validation</span></h3>
-      <p><span lang="ko">실제 객체 1.6B개·440TB 백업에서 800M→1.6B 구간 동안 초당 약 115K 객체 복사 속도가 유지됨을 확인했습니다. 가상 인벤토리로 30B 객체 백업·복구를 돌려 동시성 상한, 인벤토리 대기(전체 시간의 ~80%), 파드 CPU, 메타데이터 저장소 한계를 찾아내고 각 수정을 검증했습니다.</span><span lang="en">Backed up 1.6B real objects (440 TB) with copy throughput holding at about 115K objects/s from 800M to 1.6B. Ran 30B-object backup and restore on synthetic inventories. Found the bottlenecks (concurrency caps, an inventory wait that took ~80% of wall time, pod CPU, metadata-store limits) and verified each fix.</span></p></div>
+      <h3>Billion-scale validation</h3>
+      <p>Backed up 1.6B real objects (440 TB) with copy throughput holding at about 115K objects/s from 800M to 1.6B. Ran 30B-object backup and restore on synthetic inventories. Found the bottlenecks (concurrency caps, an inventory wait that took ~80% of wall time, pod CPU, metadata-store limits) and verified each fix.</p></div>
     <div class="card"><div class="meta">Scale · Lifecycle · Metering</div>
-      <h3><span lang="ko">스케일, 데이터 수명주기, 과금</span><span lang="en">Scale, lifecycle &amp; metering</span></h3>
-      <p><span lang="ko">합성 이벤트로 최대 50M 이벤트/윈도우까지 CDP가 따라가는지 확인하는 하네스와 장기 soak 스위트를 만들었습니다. 만료·GC, 사용량 리포트와 요금표 대조도 자동화했습니다.</span><span lang="en">A synthetic-event harness that confirmed CDP keeps up at 50M events per window, plus long-running soak suites. Automated expiry and garbage-collection tests and checked usage reports against rate cards.</span></p></div>
+      <h3>Scale, lifecycle &amp; metering</h3>
+      <p>A synthetic-event harness that confirmed CDP keeps up at 50M events per window, plus long-running soak suites. Automated expiry and garbage-collection tests and checked usage reports against rate cards.</p></div>
     <div class="card"><div class="meta">Infra · CI</div>
-      <h3><span lang="ko">IaC 온보딩과 CI 파이프라인</span><span lang="en">IaC onboarding &amp; CI</span></h3>
-      <p><span lang="ko">Terraform/CloudFormation 기반 클라우드 계정 온보딩(업그레이드, 상태 기반 드리프트 감지, 복구 경로)을 자동화하고, Jenkins 파이프라인 운영과 폐기된 테스트 환경 2개의 복구를 맡았습니다.</span><span lang="en">Automated cloud-account onboarding with Terraform and CloudFormation: upgrades, state-backed drift detection, recovery paths. Ran Jenkins pipelines and brought two retired test environments back into service.</span></p></div>
+      <h3>IaC onboarding &amp; CI</h3>
+      <p>Automated cloud-account onboarding with Terraform and CloudFormation: upgrades, state-backed drift detection, recovery paths. Ran Jenkins pipelines and brought two retired test environments back into service.</p></div>
     <div class="card"><div class="meta">Framework</div>
-      <h3><span lang="ko">테스트 프레임워크와 품질</span><span lang="en">Test framework &amp; quality</span></h3>
-      <p><span lang="ko">CI에 리포트를 남기는 test-flow 엔진, 장기 작업 모니터, REST/gRPC 클라이언트 래퍼를 만들었습니다. 절대 실패하지 않는 assertion을 찾아내는 감사(audit)를 주도했습니다.</span><span lang="en">Built a test-flow reporting engine for CI, a monitor for long-running tasks and REST/gRPC client wrappers. Led audits that found and fixed assertions that could never fail.</span></p></div>
+      <h3>Test framework &amp; quality</h3>
+      <p>Built a test-flow reporting engine for CI, a monitor for long-running tasks and REST/gRPC client wrappers. Led audits that found and fixed assertions that could never fail.</p></div>
     <div class="card"><div class="meta">Leadership</div>
-      <h3><span lang="ko">테스트 프로그램 오너십과 팀 성장</span><span lang="en">Owning the program, growing the team</span></h3>
-      <p><span lang="ko">S3·GCS 테스트 영역의 주 담당자로 38개 에픽과 약 21개 테스트 플랜(마일스톤 종료 기준·요구사항 추적표 포함)을 리드했습니다. 신규 QE 온보딩 튜토리얼과 가이드, 면접 과제·평가표를 만들고 면접관으로 참여합니다.</span><span lang="en">Primary owner of the S3 and GCS test areas. Led 38 epics and about 21 test plans with exit criteria and requirement traceability. Built the onboarding tutorial and guides for new QE hires, wrote interview exercises and scorecards, and sit on the interview panel.</span></p></div>
+      <h3>Owning the program, growing the team</h3>
+      <p>Primary owner of the S3 and GCS test areas. Led the epics and test plans with exit criteria and requirement traceability. Built the onboarding tutorial and guides for new QE hires, wrote interview exercises and scorecards, and sit on the interview panel.</p></div>
   </div>
 </div></section>
 
 <section id="experience"><div class="wrap">
   <div class="eyebrow">Experience</div>
-  <h2><span lang="ko">경력</span><span lang="en">Experience</span></h2>
-  <div class="job"><div class="when">2022 — <span lang="ko">현재</span><span lang="en">Present</span></div><div>
+  <h2>Experience</h2>
+  <div class="job"><div class="when">2022 — Present</div><div>
     <h3>Software Engineer (QE / SDET) · Clumio, a Commvault company</h3>
     <ul>
-      <li><span lang="ko">GCS 데이터 보호 시스템 테스트 리드, S3 시스템 테스트 공동 담당</span><span lang="en">Lead for GCS data-protection system testing; co-owner of S3 system testing</span></li>
-      <li><span lang="ko">테스트 플랜·장애 매트릭스 설계, 에픽 단위 업무 분해와 리드</span><span lang="en">Write test plans and fault matrices, break epics into work and drive them</span></li>
-      <li><span lang="ko">S3 Instant Access(EA→GA), S3 Rewind 스냅샷 롤백 QE 리드</span><span lang="en">QE lead for S3 Instant Access (early access to GA) and S3 Rewind snapshot rollback</span></li>
-      <li><span lang="ko">GCS 백업 신규 제품의 QE를 0부터 GA 이후까지 전담</span><span lang="en">Owned QE for the new GCS backup product from zero to GA and beyond</span></li>
-      <li><span lang="ko">Azure Blob P0 테스트 전략 수립과 공용 테스트 베이스 구축 (2026)</span><span lang="en">Wrote the Azure Blob P0 test strategy and built its shared test base (2026)</span></li>
-      <li><span lang="ko">204건의 제품 버그 리포트 (High 이상 약 1/4) — 데이터 누락, 권한 우회, 스케일 한계, 경쟁 조건</span><span lang="en">Reported 204 product bugs (about a quarter High or above): silent data loss, authorization bypasses, scale limits, races</span></li>
+      <li>Lead for GCS data-protection system testing; co-owner of S3 system testing</li>
+      <li>Write test plans and fault matrices, break epics into work and drive them</li>
+      <li>QE lead for S3 Instant Access (early access to GA) and S3 Rewind snapshot rollback</li>
+      <li>Owned QE for the new GCS backup product from zero to GA and beyond</li>
+      <li>Wrote the Azure Blob P0 test strategy and built its shared test base (2026)</li>
+      <li>Catch product bugs before release: silent data loss, authorization bypasses, scale limits, races. About a quarter are rated High or above</li>
     </ul></div></div>
   <div class="job"><div class="when">— 2022</div><div>
     <h3>Software Engineer · IDCITI</h3>
     <ul>
-      <li><span lang="ko">uGPS: 지하철 터널 1.5km 구간 GNSS 음영지역 해소 시스템 (MobiCom 2022)</span><span lang="en">uGPS: seamless GNSS across a 1.5 km subway tunnel (MobiCom 2022)</span></li>
-      <li><span lang="ko">실내 드론 테스팅 솔루션, IDefense</span><span lang="en">Indoor drone-testing solution; IDefense</span></li>
+      <li>uGPS: seamless GNSS across a 1.5 km subway tunnel (MobiCom 2022)</li>
+      <li>Indoor drone-testing solution; IDefense</li>
     </ul></div></div>
-  <div class="job"><div class="when"><span lang="ko">학력</span><span lang="en">Education</span></div><div>
+  <div class="job"><div class="when">Education</div><div>
     <h3>M.S. Computer Science · Stony Brook University</h3>
     <ul><li>Mobile Computing &amp; Wireless Networks</li></ul></div></div>
   <div class="job"><div class="when">Stack</div><div><div class="chips" style="margin-top:0">
@@ -190,33 +186,22 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 
 <section id="research"><div class="wrap">
   <div class="eyebrow">Research &amp; patents</div>
-  <h2><span lang="ko">논문 · 특허</span><span lang="en">Papers &amp; patents</span></h2>
+  <h2>Papers &amp; patents</h2>
   <ul class="list">
     <li><b>uGPS: Design and Field-Tested Seamless GNSS Infrastructure in Metro City</b><small>ACM MobiCom 2022 · H. Kim, J. Park, S. Park, J. Ryoo</small></li>
     <li><b>Which Uber is Mine? Identifying Target in Crowd of Objects with RF Analysis and AR Visual Tags</b><small>ACM MobiCom 2022 Poster · J. Park, H. Lim, J. Ryoo</small></li>
-    <li><b><span lang="ko">GNSS 음영지역을 지원하는 GNSS 시스템</span><span lang="en">GNSS system supporting GNSS-denied areas</span></b><small><span lang="ko">특허 출원 제21-191864호</span><span lang="en">Korean patent application No. 21-191864</span></small></li>
+    <li><b>GNSS system supporting GNSS-denied areas</b><small>Korean patent application No. 21-191864</small></li>
   </ul>
 </div></section>
 
 <section id="contact"><div class="wrap"><div class="band">
   <div class="eyebrow" style="color:#fff">Contact</div>
-  <h2><span lang="ko">함께 이야기해요</span><span lang="en">Let's talk</span></h2>
-  <p><span lang="ko">분산 시스템 신뢰성, 멀티클라우드, 테스트 인프라에 대한 이야기는 언제든 환영입니다.</span><span lang="en">Always happy to talk distributed-systems reliability, multi-cloud and test infrastructure.</span></p>
+  <h2>Let's talk</h2>
+  <p>Always happy to talk distributed-systems reliability, multi-cloud and test infrastructure.</p>
   <div class="cta"><a class="btn primary" href="mailto:tacohun21@gmail.com">tacohun21@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/junghun-park-a32303174/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://velog.io/@tacohun21" target="_blank" rel="noopener">velog</a></div>
 </div></div></section>
 </main>
 
 <footer><div class="wrap">© 2026 Junghun Park</div></footer>
-<script>
-const setLang = l => {
-  document.documentElement.dataset.lang = l;
-  document.documentElement.lang = l;
-  document.querySelectorAll('[data-set-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.setLang === l));
-  try { localStorage.setItem('lang', l); } catch {}
-};
-document.querySelectorAll('[data-set-lang]').forEach(b => b.onclick = () => setLang(b.dataset.setLang));
-let saved; try { saved = localStorage.getItem('lang'); } catch {}
-setLang(saved || (navigator.language.startsWith('ko') ? 'ko' : 'en'));
-</script>
 </body>
 </html>
