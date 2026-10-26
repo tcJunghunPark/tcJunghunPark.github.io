@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ko" data-lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Junghun Park</title>
+<meta name="description" content="Junghun Park — Software Engineer building reliability and validation systems for multi-cloud data protection.">
+<meta property="og:title" content="Junghun Park — Software Engineer">
+<meta property="og:description" content="Multi-cloud reliability, fault injection, and test infrastructure for cloud data protection.">
+<meta property="og:url" content="https://junghun-park.com/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfaf7;--surface:#ffffff;--ink:#16181d;--muted:#5d6270;--line:#e7e4dc;
+  --accent:#d9480f;--accent-soft:#fff1e8;--chip:#f3f1ec;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111317;--surface:#181b21;--ink:#eceef2;--muted:#9aa1ae;--line:#2a2e37;
+  --accent:#ff8a4c;--accent-soft:#2a1d15;--chip:#20242c;
+}}
+:root[data-theme="dark"]{
+  --bg:#111317;--surface:#181b21;--ink:#eceef2;--muted:#9aa1ae;--line:#2a2e37;
+  --accent:#ff8a4c;--accent-soft:#2a1d15;--chip:#20242c;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 Inter,"Noto Sans KR",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html[data-lang="ko"] [lang="en"],html[data-lang="en"] [lang="ko"]{display:none}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:20px;height:56px}
+nav .brand{font-weight:700;text-decoration:none;margin-right:auto}
+nav .links a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:18px}
+nav .links a:hover{color:var(--ink)}
+.toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.toggle button{border:0;background:none;color:var(--muted);font:500 13px Inter,sans-serif;padding:5px 11px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+@media (max-width:720px){nav .links{display:none}}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.eyebrow{font:500 13px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:clamp(36px,6vw,56px);line-height:1.1;letter-spacing:-.02em;font-weight:700}
+h2{font-size:28px;letter-spacing:-.01em;margin-bottom:28px}
+h3{font-size:18px;margin-bottom:6px}
+.lead{font-size:19px;color:var(--muted);max-width:680px;margin-top:20px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-block;padding:9px 16px;border-radius:8px;border:1px solid var(--line);text-decoration:none;font-weight:500;font-size:14px;background:var(--surface)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.stat b{display:block;font-size:28px;letter-spacing:-.02em}
+.stat span{font-size:13px;color:var(--muted)}
+@media (max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card p{color:var(--muted);font-size:15px}
+.meta{font:500 12px "JetBrains Mono",monospace;color:var(--accent);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{background:var(--chip);border-radius:6px;padding:2px 8px;font-size:12px;color:var(--muted)}
+.job{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0}
+.job .when{color:var(--muted);font-size:14px}
+.job ul{padding-left:18px;color:var(--muted)}
+.job li{margin:4px 0}
+@media (max-width:720px){.job{grid-template-columns:1fr;gap:4px}}
+.list{list-style:none;padding:0}
+.list li{padding:14px 0;border-top:1px solid var(--line)}
+.list li:first-child{border-top:0}
+.list small{display:block;color:var(--muted)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:720px){.principles{grid-template-columns:1fr}}
+footer{padding:40px 0;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#top">Junghun Park 🌮</a>
+  <div class="links">
+    <a href="#work"><span lang="ko">주요 업무</span><span lang="en">Work</span></a>
+    <a href="#experience"><span lang="ko">경력</span><span lang="en">Experience</span></a>
+    <a href="#research"><span lang="ko">연구</span><span lang="en">Research</span></a>
+    <a href="#projects"><span lang="ko">프로젝트</span><span lang="en">Projects</span></a>
+    <a href="#contact"><span lang="ko">연락</span><span lang="en">Contact</span></a>
+  </div>
+  <div class="toggle" role="group" aria-label="Language">
+    <button data-set-lang="ko" aria-pressed="true">KR</button>
+    <button data-set-lang="en" aria-pressed="false">EN</button>
+  </div>
+</nav></div></header>
+
+<main id="top">
+<section><div class="wrap">
+  <div class="eyebrow">Software Engineer · Clumio, a Commvault company</div>
+  <h1><span lang="ko">멀티클라우드 데이터 보호의<br>신뢰성을 검증합니다.</span><span lang="en">I make multi-cloud data<br>protection provably reliable.</span></h1>
+  <p class="lead">
+    <span lang="ko">AWS·GCP·Azure 위에서 동작하는 백업/복구 플랫폼의 시스템 테스트를 설계하고 이끕니다. 장애 주입, 대규모 스케일 테스트, 멀티테넌트 격리 검증, CI 파이프라인까지 — 고객이 데이터를 잃지 않도록 시스템이 실패하는 모든 방식을 먼저 찾아냅니다.</span>
+    <span lang="en">I design and lead system testing for a backup and restore platform running on AWS, GCP and Azure. Fault injection, scale testing, multi-tenant isolation and CI pipelines: I find every way the system can fail before a customer does.</span>
+  </p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:tacohun21@gmail.com">tacohun21@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/junghun-park-a32303174/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/tcJunghunPark" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://velog.io/@tacohun21" target="_blank" rel="noopener">velog</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>868</b><span lang="ko">머지된 PR (2022–2026)</span><span lang="en">merged PRs (2022–2026)</span></div>
+    <div class="stat"><b>157K</b><span lang="ko">추가한 코드 라인</span><span lang="en">lines of code added</span></div>
+    <div class="stat"><b>3</b><span lang="ko">클라우드 (AWS·GCP·Azure)</span><span lang="en">clouds (AWS · GCP · Azure)</span></div>
+    <div class="stat"><b>30B</b><span lang="ko">객체 규모 스케일 테스트</span><span lang="en">object-scale test run</span></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="eyebrow">Selected work</div>
+  <h2><span lang="ko">주요 업무</span><span lang="en">What I build</span></h2>
+  <div class="grid">
+    <div class="card"><div class="meta">GCP · 2025–2026 · ~175 PRs</div>
+      <h3><span lang="ko">GCS 백업 테스트 스위트를 처음부터 구축</span><span lang="en">GCS backup test suite, from zero</span></h3>
+      <p><span lang="ko">플랫폼이 Google Cloud를 지원하기 시작하면서 SDK 레이어, API 래퍼, 매일 도는 pre-checkin 파이프라인, 보호 그룹·정책, 버전 체인 복구, 아카이브 티어 복구, 필터(prefix·regex·storage class)와 시점 복구까지 전체 테스트 체계를 리드했습니다.</span><span lang="en">As the platform added Google Cloud, I led the whole test program: SDK layer, API wrappers, a daily pre-checkin pipeline, protection groups and policies, versioned restore chains, archive-tier restores, backup filters and point-in-time restore.</span></p>
+      <div class="chips"><span>GCS</span><span>Pub/Sub</span><span>Eventarc</span><span>Terraform</span><span>pytest</span></div></div>
+    <div class="card"><div class="meta">AWS · 2023–2026 · 225+ PRs</div>
+      <h3><span lang="ko">S3 백업/복구 E2E 커버리지</span><span lang="en">S3 backup &amp; restore end to end</span></h3>
+      <p><span lang="ko">증분 백업, 객체 필터, 스토리지 클래스·아카이브 티어, 고객 제공 키 암호화, 체크섬, 멀티파트, 멀웨어 탐지, 교차 리전 복구를 검증했습니다. Instant Access, 버킷 시점 롤백 등 신규 기능의 출시 전 자동화를 리드했습니다.</span><span lang="en">Coverage for incremental backups, object filters, storage classes and archive tiers, customer-key encryption, checksums, multipart uploads, malware detection and cross-region restore. Led pre-release automation for instant access and point-in-time bucket rollback.</span></p>
+      <div class="chips"><span>S3</span><span>IAM</span><span>EventBridge</span><span>SQS</span><span>CloudFormation</span></div></div>
+    <div class="card"><div class="meta">Resilience · 2023–2026</div>
+      <h3><span lang="ko">장애 주입 매트릭스</span><span lang="en">Fault-injection matrices</span></h3>
+      <p><span lang="ko">백업·복구 도중 원본 삭제/덮어쓰기, 권한 회수, 요청자 지불 버킷, 법적 보존·리텐션 락, 암호화 키 손상 등을 주입하는 헬퍼와 파이프라인을 설계했습니다. 고객이 실제로 보는 알림·에러 리포트·작업 상태를 기준으로 검증합니다.</span><span lang="en">Designed helpers and pipelines that break things mid-backup or mid-restore: deleted or overwritten sources, revoked access, requester-pays buckets, legal holds, broken encryption keys. Every test asserts on what the customer actually sees.</span></p></div>
+    <div class="card"><div class="meta">Continuous data protection</div>
+      <h3><span lang="ko">이벤트 기반 연속 백업(CDP)</span><span lang="en">Event-driven continuous backup</span></h3>
+      <p><span lang="ko">두 클라우드에서 마이크로 백업, 재보호, carry-over 이벤트, soft/hard delete, 다중 토픽 토폴로지를 검증했습니다. 내부 트리거 대신 공개 고객 API로 스위트를 전환했습니다.</span><span lang="en">Validated micro-backups, reprotect flows, carry-over events, soft vs hard deletes and multi-topic topologies on both clouds. Moved the suites from internal triggers to the public customer API.</span></p></div>
+    <div class="card"><div class="meta">Multi-tenancy</div>
+      <h3><span lang="ko">멀티테넌트 격리(RBAC) 검증</span><span lang="en">Multi-tenant isolation (RBAC)</span></h3>
+      <p><span lang="ko">조직 단위 간 접근 거부, 리소스 이동, 목록 스코핑, 작업·과금 레코드 귀속을 다루는 커버리지 매트릭스를 만들고, 그 과정에서 격리 결함을 찾아냈습니다.</span><span lang="en">Built a coverage matrix for cross-unit denial, moving resources between units, list scoping and attribution on tasks and billing, and found isolation gaps along the way.</span></p></div>
+    <div class="card"><div class="meta">Scale · Lifecycle · Metering</div>
+      <h3><span lang="ko">스케일, 데이터 수명주기, 과금</span><span lang="en">Scale, lifecycle &amp; metering</span></h3>
+      <p><span lang="ko">합성 인벤토리·이벤트로 실제 픽스처로는 만들 수 없는 규모의 부하를 주는 하네스와 장기 soak 스위트를 만들었습니다. 만료·GC, 사용량 리포트와 요금표 대조도 자동화했습니다.</span><span lang="en">Scale harnesses that use synthetic inventories and events to load pipelines far beyond real fixtures, plus long-running soak suites. Automated expiry and garbage-collection tests and checked usage reports against rate cards.</span></p></div>
+    <div class="card"><div class="meta">Infra · CI</div>
+      <h3><span lang="ko">IaC 온보딩과 CI 파이프라인</span><span lang="en">IaC onboarding &amp; CI</span></h3>
+      <p><span lang="ko">Terraform/CloudFormation 기반 클라우드 계정 온보딩(업그레이드, 상태 기반 드리프트 감지, 복구 경로)을 자동화하고, Jenkins 파이프라인 운영과 폐기된 테스트 환경 2개의 복구를 맡았습니다.</span><span lang="en">Automated cloud-account onboarding with Terraform and CloudFormation: upgrades, state-backed drift detection, recovery paths. Ran Jenkins pipelines and brought two retired test environments back into service.</span></p></div>
+    <div class="card"><div class="meta">Framework</div>
+      <h3><span lang="ko">테스트 프레임워크와 품질</span><span lang="en">Test framework &amp; quality</span></h3>
+      <p><span lang="ko">CI에 리포트를 남기는 test-flow 엔진, 장기 작업 모니터, REST/gRPC 클라이언트 래퍼를 만들었습니다. 절대 실패하지 않는 assertion을 찾아내는 감사(audit)를 주도했습니다.</span><span lang="en">Built a test-flow reporting engine for CI, a monitor for long-running tasks and REST/gRPC client wrappers. Led audits that found and fixed assertions that could never fail.</span></p></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="eyebrow">Experience</div>
+  <h2><span lang="ko">경력</span><span lang="en">Experience</span></h2>
+  <div class="job"><div class="when">2022 — <span lang="ko">현재</span><span lang="en">Present</span></div><div>
+    <h3>Software Engineer (QE / SDET) · Clumio, a Commvault company</h3>
+    <ul>
+      <li><span lang="ko">GCS 데이터 보호 시스템 테스트 리드, S3 시스템 테스트 공동 담당</span><span lang="en">Lead for GCS data-protection system testing; co-owner of S3 system testing</span></li>
+      <li><span lang="ko">테스트 플랜·장애 매트릭스 설계, 에픽 단위 업무 분해와 리드</span><span lang="en">Write test plans and fault matrices, break epics into work and drive them</span></li>
+      <li><span lang="ko">Azure Blob 테스트 프레임워크 착수 (2026)</span><span lang="en">Started the Azure Blob test framework (2026)</span></li>
+    </ul></div></div>
+  <div class="job"><div class="when">— 2022</div><div>
+    <h3>Software Engineer · IDCITI</h3>
+    <ul>
+      <li><span lang="ko">uGPS: 지하철 터널 1.5km 구간 GNSS 음영지역 해소 시스템 (MobiCom 2022)</span><span lang="en">uGPS: seamless GNSS across a 1.5 km subway tunnel (MobiCom 2022)</span></li>
+      <li><span lang="ko">실내 드론 테스팅 솔루션, IDefense</span><span lang="en">Indoor drone-testing solution; IDefense</span></li>
+    </ul></div></div>
+  <div class="job"><div class="when"><span lang="ko">학력</span><span lang="en">Education</span></div><div>
+    <h3>M.S. Computer Science · Stony Brook University</h3>
+    <ul><li>Mobile Computing &amp; Wireless Networks</li></ul></div></div>
+</div></section>
+
+<section id="research"><div class="wrap">
+  <div class="eyebrow">Research &amp; patents</div>
+  <h2><span lang="ko">논문 · 특허</span><span lang="en">Papers &amp; patents</span></h2>
+  <ul class="list">
+    <li><b>uGPS: Design and Field-Tested Seamless GNSS Infrastructure in Metro City</b><small>ACM MobiCom 2022 · H. Kim, J. Park, S. Park, J. Ryoo</small></li>
+    <li><b>Which Uber is Mine? Identifying Target in Crowd of Objects with RF Analysis and AR Visual Tags</b><small>ACM MobiCom 2022 Poster · J. Park, H. Lim, J. Ryoo</small></li>
+    <li><b><span lang="ko">GNSS 음영지역을 지원하는 GNSS 시스템</span><span lang="en">GNSS system supporting GNSS-denied areas</span></b><small><span lang="ko">특허 출원 제21-191864호</span><span lang="en">Korean patent application No. 21-191864</span></small></li>
+  </ul>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <div class="eyebrow">Projects &amp; awards</div>
+  <h2><span lang="ko">프로젝트 · 수상</span><span lang="en">Projects &amp; competitions</span></h2>
+  <div class="grid">
+    <div class="card"><div class="meta">Stony Brook University</div><h3>IvyMagazine</h3><p><span lang="ko">👗 학교 팀 프로젝트 — 웹 매거진</span><span lang="en">👗 School team project — web magazine</span></p></div>
+    <div class="card"><div class="meta">Stony Brook University</div><h3>YouNote</h3><p><span lang="ko">📝 YouTube 영상과 노트패드를 결합한 학습 웹앱 (CSE 323 팀 프로젝트)</span><span lang="en">📝 Web app pairing YouTube videos with a notepad (CSE 323 team project)</span></p></div>
+    <div class="card"><div class="meta">Personal</div><h3>TrackIO</h3><p><span lang="ko">🧭 개인 프로젝트</span><span lang="en">🧭 Personal project</span></p></div>
+    <div class="card"><div class="meta">Competitions</div><h3><span lang="ko">경진대회</span><span lang="en">Competitions</span></h3><p><span lang="ko">국방과학기술을 활용한 창업 경진대회 · 태양광 발전량 예측 AI 경진대회</span><span lang="en">Defense-technology startup competition · Solar power forecasting AI competition</span></p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="eyebrow">How I work</div>
+  <h2><span lang="ko">일하는 방식</span><span lang="en">How I work</span></h2>
+  <div class="principles">
+    <div class="card"><h3><span lang="ko">👬 함께 목표를 달성</span><span lang="en">👬 Win as a team</span></h3><p><span lang="ko">다양한 배경의 동료와 끊임없이 소통하며 공통된 방향을 유지합니다.</span><span lang="en">Constant communication across backgrounds keeps everyone pointed at the same goal.</span></p></div>
+    <div class="card"><h3><span lang="ko">🌳 요구사항보다 목표</span><span lang="en">🌳 Goals over tickets</span></h3><p><span lang="ko">작은 요구사항보다 프로젝트의 큰 목표를 기억하고 더 나은 대안을 제시합니다.</span><span lang="en">I keep the project goal in view, not just the next requirement, and propose better options.</span></p></div>
+    <div class="card"><h3><span lang="ko">🧪 실패를 먼저 찾기</span><span lang="en">🧪 Find failure first</span></h3><p><span lang="ko">"통과"가 아니라 "고객이 무엇을 보는가"로 검증합니다. 실패할 수 없는 테스트는 테스트가 아닙니다.</span><span lang="en">I assert on what the customer sees, not on "it passed". A test that cannot fail is not a test.</span></p></div>
+  </div>
+  <div class="chips" style="margin-top:24px">
+    <span>Python</span><span>Go</span><span>pytest</span><span>Pydantic</span><span>gRPC / Protobuf</span><span>REST</span><span>AWS</span><span>GCP</span><span>Azure</span><span>Terraform</span><span>Kubernetes</span><span>Jenkins</span><span>PostgreSQL</span><span>Docker</span>
+  </div>
+</div></section>
+
+<section id="contact" style="border-bottom:0"><div class="wrap">
+  <div class="eyebrow">Contact</div>
+  <h2><span lang="ko">연락하기</span><span lang="en">Get in touch</span></h2>
+  <p class="lead" style="margin-top:0"><span lang="ko">분산 시스템 신뢰성, 멀티클라우드, 테스트 인프라에 대한 이야기는 언제든 환영입니다.</span><span lang="en">Always happy to talk distributed-systems reliability, multi-cloud and test infrastructure.</span></p>
+  <div class="cta"><a class="btn primary" href="mailto:tacohun21@gmail.com">tacohun21@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/junghun-park-a32303174/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Junghun Park</div></footer>
+<script>
+const setLang = l => {
+  document.documentElement.dataset.lang = l;
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-set-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.setLang === l));
+  try { localStorage.setItem('lang', l); } catch {}
+};
+document.querySelectorAll('[data-set-lang]').forEach(b => b.onclick = () => setLang(b.dataset.setLang));
+let saved; try { saved = localStorage.getItem('lang'); } catch {}
+setLang(saved || (navigator.language.startsWith('ko') ? 'ko' : 'en'));
+</script>
+</body>
+</html>
